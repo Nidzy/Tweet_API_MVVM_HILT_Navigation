@@ -52,11 +52,13 @@ fun DetailItem(tweet: String) {
 
     Card(modifier= Modifier
         .padding(8.dp)
-        .safeContentPadding(), elevation = CardDefaults.outlinedCardElevation()) {
+        .safeContentPadding(), colors = CardDefaults.cardColors(
+        containerColor = Color.Black,
+    ),elevation = CardDefaults.outlinedCardElevation()) {
         Text(
             text = tweet,
             fontSize = 18.sp,
-            color = Color.Black,
+            color = Color.White,
             modifier = Modifier.padding(20.dp, 20.dp),
             style = MaterialTheme.typography.bodySmall
         )

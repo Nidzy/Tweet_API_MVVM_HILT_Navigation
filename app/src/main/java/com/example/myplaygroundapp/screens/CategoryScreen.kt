@@ -40,7 +40,7 @@ fun CategoryScreen(onClick: (category: String) -> Unit) {
            CircularProgressIndicator(color = Color.Black)  }
     }
     LazyVerticalGrid(columns = GridCells.Fixed(2),
-        contentPadding = PaddingValues(8.dp), 
+        contentPadding = PaddingValues(8.dp),
         verticalArrangement = Arrangement.SpaceAround,
         ) {
         items(categories.value) {
@@ -56,11 +56,13 @@ fun CategoryItem(category: String, onClick : (category:String) ->Unit) {
             .padding(8.dp).clickable {
                 onClick(category)
             }
-            .safeContentPadding(), elevation = CardDefaults.cardElevation()) {
+            .safeContentPadding(), colors = CardDefaults.cardColors(
+            containerColor = Color.Black,
+        ), elevation = CardDefaults.cardElevation()) {
             Text(
                 text = category,
                 fontSize = 18.sp,
-                color = Color.Black,
+                color = Color.White,
                 modifier = Modifier.padding(20.dp, 20.dp),
                 style = MaterialTheme.typography.bodySmall
             )
